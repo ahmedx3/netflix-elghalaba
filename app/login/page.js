@@ -29,7 +29,7 @@ export default function login() {
       </nav>
       {/* Form */}
       <div className='flex flex-col items-center justify-center h-3/4'>
-        <div class='w-1/4 p-4 justify-center  rounded-lg shadow sm:p-6 md:p-8 dark:bg-black bg-opacity-50 '>
+        <div class='w-2/4 lg:w-1/4 p-4 justify-center  rounded-lg shadow sm:p-6 md:p-8 dark:bg-black bg-opacity-50 '>
           <form class='space-y-6' action='#'>
             <h5 class='text-2xl font-medium text-gray-900 dark:text-white'>
               Sign in
