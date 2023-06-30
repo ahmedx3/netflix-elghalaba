@@ -4,18 +4,25 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { setDoc, doc } from 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { db } from '../firebase';
 
 export default function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [user, loading, error] = useAuthState(auth);
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then(async (userCredential) => {
         // Redirect to browse page
-        router.push('/browse');
-        console.log(userCredential);
+        await setDoc(doc(db, 'movies', userCredential.user.uid), {}).then(
+          () => {
+            router.push('/browse');
+          }
+        );
       })
 
       .catch((error) => {

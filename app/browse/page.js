@@ -7,14 +7,23 @@ import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import {
+  Firestore,
+  arrayUnion,
+  collection,
+  getFirestore,
+  updateDoc,
+} from 'firebase/firestore';
+import { db } from '../firebase';
+import { addDoc, setDoc, doc, getDoc } from 'firebase/firestore';
 
 export default function Browse() {
   const router = useRouter();
   const [posterMovie, setPosterMovie] = useState([]);
   const [actionMovies, setActionMovies] = useState([]);
   const [comedyMovies, setComedyMovies] = useState([]);
-
-  console.log(actionMovies);
+  const [user, loading, error] = useAuthState(auth);
 
   const config = {
     headers: {
@@ -53,6 +62,15 @@ export default function Browse() {
         setComedyMovies(response.data.results);
       });
   }, []);
+
+  // Add movie to watchlist
+  const handleAddToWatchlist = async (movie) => {
+    await updateDoc(doc(db, 'movies', user.uid), {
+      watchlist: arrayUnion(movie),
+    }).then(() => {
+      alert('Added to watchlist!');
+    });
+  };
 
   const handleNavigateToHome = () => {
     router.push('/');
@@ -118,8 +136,13 @@ export default function Browse() {
                   Watch Trailer
                 </button>
                 <button
+                  onClick={() => handleAddToWatchlist(posterMovie)}
                   type='button'
-                  className='inline-flex text-white hover:text-white border border-red-700 hover:bg-red-800  focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-white dark:hover:text-white dark:hover:bg-red-600 '
+                  className='inline-flex text-white
+                  hover:text-white border border-red-700 hover:bg-red-800
+                  focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5
+                  text-center mr-2 mb-2 dark:border-red-500 dark:text-white
+                  dark:hover:text-white dark:hover:bg-red-600 '
                 >
                   <svg
                     fill='none'
