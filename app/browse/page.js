@@ -12,6 +12,7 @@ export default function Browse() {
   const router = useRouter();
   const [posterMovie, setPosterMovie] = useState([]);
   const [actionMovies, setActionMovies] = useState([]);
+  const [comedyMovies, setComedyMovies] = useState([]);
 
   console.log(actionMovies);
 
@@ -41,6 +42,15 @@ export default function Browse() {
       )
       .then((response) => {
         setActionMovies(response.data.results);
+      });
+
+    axios
+      .get(
+        'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=35',
+        config
+      )
+      .then((response) => {
+        setComedyMovies(response.data.results);
       });
   }, []);
 
@@ -143,6 +153,7 @@ export default function Browse() {
           <MovieCard />
         </div> */}
         <MovieRow title='Action' movies={actionMovies} />
+        <MovieRow title='Comedy' movies={comedyMovies} />
       </div>
     </div>
   );

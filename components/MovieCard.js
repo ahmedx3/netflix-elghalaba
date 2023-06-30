@@ -1,10 +1,10 @@
 function movieCard({ movie }) {
   return (
-    <div class='relative'>
+    <div class='flex-none relative  snap-center snap-always w-[220px]'>
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
-        className='rounded-lg opacity-75 object-cover'
+        className='rounded-lg opacity-80 object-cover'
       />
       <h3 class='absolute top-5 right-5'>
         <svg
@@ -23,8 +23,7 @@ function movieCard({ movie }) {
           ></path>
         </svg>
       </h3>
-      <h3 class='absolute text-lg bottom-12 left-5 font-bold'>{movie.title}</h3>
-      <h3 class='absolute bottom-5 left-5'>
+      <h3 class='absolute top-5 left-5'>
         <div class='flex items-center '>
           <svg
             aria-hidden='true'
@@ -38,13 +37,6 @@ function movieCard({ movie }) {
           </svg>
           <p class='ml-2 text-sm font-bold text-gray-900 dark:text-white'>
             {(movie.vote_average * 5) / 10}
-          </p>
-          <span class='w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400'></span>
-          <p
-            href='#'
-            class='text-sm font-medium text-gray-900  dark:text-white'
-          >
-            | Action . Movie
           </p>
         </div>
       </h3>
