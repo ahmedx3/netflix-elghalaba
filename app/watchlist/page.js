@@ -7,6 +7,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { db } from '../firebase';
 import { doc, getDoc, collection } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
+import { signOut } from 'firebase/auth';
 
 export default function WatchList() {
   const router = useRouter();
@@ -26,7 +27,7 @@ export default function WatchList() {
           console.log(error);
         });
     }
-  }, []);
+  }, [watchlist]);
 
   const handleNavigateToHome = () => {
     router.push('/');

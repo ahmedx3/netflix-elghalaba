@@ -1,9 +1,13 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { auth } from '../app/firebase';
+import { useEffect } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 export default function Home() {
   const router = useRouter();
+  const [user, loading, error] = useAuthState(auth);
 
   const handleNavigateToLogin = () => {
     router.push('/login');
@@ -12,6 +16,12 @@ export default function Home() {
   const handleNavigateToHome = () => {
     router.push('/');
   };
+
+  useEffect(() => {
+    if (user) {
+      router.push('/browse');
+    }
+  }, []);
 
   return (
     <div>
