@@ -21,7 +21,7 @@ function MovieCard({ movie }) {
 
   const config = {
     headers: {
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_ACCESS_TOKEN}`,
+      Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MjEzYmY2NjdkNTk5Y2IxN2Y3NDE4YmI5YjA5NmIzMyIsInN1YiI6IjY0ODljOTczZTM3NWMwMDBjNTJhNGVkNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mN5kLAJZ2xPyFNlDpi-9rmt00eWZRxb7cb9ETJ16w9E`,
     },
   };
 
