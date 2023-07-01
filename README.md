@@ -1,34 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NETFLIX ELGHALABA :tv:
 
-## Getting Started
+![1](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/7ed449c1-6439-4495-bb58-de8eab2a8230)
 
-First, run the development server:
+## Features :fire:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+:tv: User authentication and autherization<br>
+:tv: View movies based on categories<br>
+:tv: Carousel of movies coming from the TMDB API<br>
+:tv: Click the movie to see the trailer and rating!<br>
+:tv: Add movies to your watchlist!<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+![2](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/e783c70c-a9ec-47ed-85e3-95e00a04e7de)
 
-To learn more about Next.js, take a look at the following resources:
+![3](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/0ee64f10-b021-489c-a1aa-a67637fdf674)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![5](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/ba8c914a-1326-4700-8a1f-b96b1c622b93)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+:clapper: **Front-end** React , Tailwind <br>
+:clapper: **Back-end** Firebase<br>
