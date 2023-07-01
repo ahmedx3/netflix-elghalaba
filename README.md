@@ -1,6 +1,7 @@
 # NETFLIX ELGHALABA :tv:
 
-![1](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/7ed449c1-6439-4495-bb58-de8eab2a8230)
+![1](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/e7061115-85e8-4f3b-8eba-ba97214f2429)
+
 
 ## Features :fire:
 
@@ -10,15 +11,11 @@
 :tv: Click the movie to see the trailer and rating!<br>
 :tv: Add movies to your watchlist!<br>
 
+![2](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/6af7e467-7f4a-44ad-ba74-fa3e98ea0e84)
 
+![3](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/d96cb7f9-0e8d-4e23-8aa8-04678073a8c5)
 
-
-![2](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/e783c70c-a9ec-47ed-85e3-95e00a04e7de)
-
-![3](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/0ee64f10-b021-489c-a1aa-a67637fdf674)
-
-![5](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/ba8c914a-1326-4700-8a1f-b96b1c622b93)
-
+![5](https://github.com/ahmedx3/netflix-elghalaba/assets/45081989/7d4c5ede-c17f-42d3-93fb-dae6d48e198b)
 
 ## Tech Stack
 
